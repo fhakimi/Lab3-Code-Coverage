@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -arch arm64 -fcolor-diagnostics -o CMakeFiles/ProjectPhase03.dir/main.cpp.o -c /Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/main.cpp",
+  "file": "/Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/main.cpp",
+  "output": "/Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/cmake-build-debug/CMakeFiles/ProjectPhase03.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -arch arm64 -fcolor-diagnostics -o CMakeFiles/ProjectPhase03.dir/testExp.cpp.o -c /Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/testExp.cpp",
+  "file": "/Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/testExp.cpp",
+  "output": "/Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/cmake-build-debug/CMakeFiles/ProjectPhase03.dir/testExp.cpp.o"
+},
+{
+  "directory": "/Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -arch arm64 -fcolor-diagnostics -o CMakeFiles/ProjectPhase03.dir/expr.cpp.o -c /Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/expr.cpp",
+  "file": "/Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/expr.cpp",
+  "output": "/Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/cmake-build-debug/CMakeFiles/ProjectPhase03.dir/expr.cpp.o"
+},
+{
+  "directory": "/Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -arch arm64 -fcolor-diagnostics -o CMakeFiles/ProjectPhase03.dir/cmdline.cpp.o -c /Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/cmdline.cpp",
+  "file": "/Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/cmdline.cpp",
+  "output": "/Users/demih/1MSD/CS6015/ProjectPhases/ProjectPhase03/cmake-build-debug/CMakeFiles/ProjectPhase03.dir/cmdline.cpp.o"
+}
+]

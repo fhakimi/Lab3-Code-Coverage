@@ -1,0 +1,55 @@
+In this assignment, you add three methods to Expr and implement them in each expression subclass. Don't forget tests,
+of course.
+
+1. Implement interp, which returns an int for the value of an expression.
+
+The value of a number is the number
+The value of an addition expression is the sum of the subexpression values
+The value of a multiplication expression is the product of the subexpression values
+A variable has no value, so interp for a variable should throw a std::runtime_error exception
+To throw an exception, use #include <stdexcept> and
+
+throw std::runtime_error("message");
+The message text is up to you.
+
+To write a test that checks whether an exception is raised, use CHECK_THROWS_WITH:
+
+CHECK_THROWS_WITH( (new Var("x"))->interp(), "no value for variable" );
+But the second string should be the error message that you chose to use with throw.
+
+Note: An interp method should never change its object. In general in this class, only the constructor for an object
+should change the object’s fields. Otherwise, assign only to new local variables within a method.
+
+Once done, the below tests should pass. Consider adding more tests.
+
+CHECK( (new MultExpr(new NumExpr(3), new NumExpr(2)))
+        ->interp()==6 );
+CHECK( (new AddExpr(new AddExpr(new NumExpr(10), new NumExpr(15)),new AddExpr(new NumExpr(20),new NumExpr(20))))
+        ->interp()==65);
+
+2. Implement has_variable, which returns a bool. The result should be true if the expression is a variable or contains
+a variable, false otherwise. Test your method using:
+
+  CHECK( (new Add(new Var("x"), new Num(1)))->has_variable() == true );
+  CHECK( (new Mult(new Num(2), new Num(1)))->has_variable() == false );
+3. Eventually, our interpreter will need to handle function calls, and we'll do that (at first, anyway) in the same
+way you worked with functions in Algebra class. If f is defined as f(x) = x + 7, then you can simplify f(10) by
+starting with x+7 and replacing each x with 10 to get 10+7. You could even simplify f(y) by starting with x+7 and
+replacing each x with y. to get y+7. Were not doing functions, yet, but we can implement the substitution part.
+
+Implement subst, which takes two arguments: a std::string and an Expr*. The result is an Expr*. Everywhere that the
+expression (whose subst method is called) contains a variable matching the string, the result Expr* should have the
+given replacement, instead.
+
+Check these two test. It could be possible that you have different class names:
+
+CHECK( (new AddExpr(new VarExpr("x"), new NumExpr(7)))
+       ->subst("x", new VarExpr("y"))
+       ->equals(new AddExpr(new VarExpr("y"), new NumExpr(7))) );
+CHECK( (new VarExpr("x"))
+       ->subst("x", new AddExpr(new VarExpr("y"),new NumExpr(7)))
+       ->equals(new AddExpr(new VarExpr("y"),new NumExpr(7))) );
+Your subst should not use has_variable, because it's not needed.
+
+Note: The general rule against assigning to fields still applies here. The subst method should never change its object
+by assigning to fields. It should return a new object without changing the current object.
